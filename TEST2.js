@@ -181,8 +181,8 @@ function distanceToChurch(){
  
   let lat1 = x 
   let lon1 = y
-  let  lat2 = 30.660189
-  let lon2 = -96.296906
+  let  lat2 = 30.610636
+  let lon2 = -96.322703
   var p = 0.017453292519943295;    // Math.PI / 180
   var c = Math.cos;
   var a = 0.5 - c((lat2 - lat1) * p)/2 + 

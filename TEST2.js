@@ -236,6 +236,28 @@ function emsIcon() {
 
 function citizenIcon() {
   z = 0;
+  var url = 'https://api.thingspeak.com/update?api_key=NUQD36RO2XTFH4TA&field8=0';
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+   }};
+
+  var data = `{
+    "Id": 78912,
+    "Customer": "Jason Sweet",
+    "Quantity": 1,
+    "Price": 18.00
+  }`;
+
+  xhr.send(data);
   initialize()
 }
 // send FD indication to field 8
@@ -270,9 +292,16 @@ function fireIcon() {
 $(document).ready(function(){
   loadmaps();
   loadmaps2();
+  emsIcon();
+  fireIcon();
+  citizenIcon();
+  
   //check for new updates
   setInterval('loadmaps()',500)
   setInterval('loadmaps2()',500)
+  setInterval('emsIcon()',1000)
+  setInterval('fireIcon()',1000)
+  setInterval('citizenIcon()',1000)
 });
 
 $(document).ready(function(){

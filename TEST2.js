@@ -426,7 +426,7 @@ function initialize() {
         map: map,
         icon:{
           url: "firetruck.png",
-        scaledSize: new google.maps.Size(31, 31)
+        scaledSize: new google.maps.Size(61, 51)
         },
       });
       break;

@@ -292,9 +292,6 @@ function fireIcon() {
 $(document).ready(function(){
   loadmaps();
   loadmaps2();
-  emsIcon();
-  fireIcon();
-  citizenIcon();
   
   //check for new updates
   setInterval('loadmaps()',500)

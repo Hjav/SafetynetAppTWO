@@ -299,9 +299,6 @@ $(document).ready(function(){
   //check for new updates
   setInterval('loadmaps()',500)
   setInterval('loadmaps2()',500)
-  setInterval('emsIcon()',1000)
-  setInterval('fireIcon()',1000)
-  setInterval('citizenIcon()',1000)
 });
 
 $(document).ready(function(){
